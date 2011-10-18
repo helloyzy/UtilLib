@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:KpCanonicalLogMessage xmlns:spftns="http://org.kp.svc/schema/commonTypes/exceptionTypes/v1" xmlns:ns0="http://org.kp.svc/info/canonicalTypes/log/v1.0">
+ <middlewareComponentName>DataPower</middlewareComponentName>
+ <logTimestamp>2009-12-07T19:25:10-05:00</logTimestamp>
+ <messageId>23520785</messageId>
+ <messageCorrId>23520785</messageCorrId>
+ <senderInfo>
+  <applicationName>Web Service Proxy: WSP_XBETS_ESBBenefitServiceExport</applicationName>
+  <ipAddress>127.0.0.1</ipAddress>
+  <transportProtocol>http</transportProtocol>
+  <messageProtocol>text/xml</messageProtocol>
+ </senderInfo>
+ <receiverInfo>
+  <applicationName>http://127.0.0.1:1032/service/srv/hp_admn/bnft_admn/v1/XcelysGetBenefitsRules</applicationName>
+  <componentName>queue://KEHKALLOG/QA.KAL.AUDIT.DIRECT</componentName>
+  <ipAddress/>
+  <transportProtocol/>
+  <messageProtocol/>
+  <serviceName/>
+  <operationName>soap:Fault{http://schemas.xmlsoap.org/soap/envelope/}</operationName>
+ </receiverInfo>
+ <status>error</status>
+ <messageContent><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><soap:Fault><faultcode>Error Code: 0x01130006 Error SubCode: 0x00000000</faultcode><faultstring>Error Message: Failed to establish a backside connection Error Header: HTTP/1.1 500 Error Content-Type: text/xml X-Backside-Transport: FAIL FAIL Connection: close</faultstring><faultactor>National:WSP_XBETS_ESBBenefitServiceExport</faultactor><detail><transactionId>23520785</transactionId></detail></soap:Fault></soap:Body></soap:Envelope>]]></messageContent>
+ <ns0:ExceptionInfo type="SYS">
+  <spftns:exceptionName>DataPower Error: 0x01130006</spftns:exceptionName>
+  <spftns:exceptionType>System Exception</spftns:exceptionType>
+  <spftns:exceptionDateTime>2009-12-07T19:25:10-05:00</spftns:exceptionDateTime>
+  <spftns:severityType>Critical</spftns:severityType>
+  <spftns:exceptionDetail>
+   <spftns:sequenceNo>0</spftns:sequenceNo>
+   <spftns:exceptionCode>0x00d30002</spftns:exceptionCode>
+   <spftns:exceptionDescription>Failed to establish a backside connection</spftns:exceptionDescription>
+  </spftns:exceptionDetail>
+  <spftns:hostName/>
+  <spftns:hostType/>
+  <spftns:hostIPAddress/>
+  <spftns:origMessageId>23520785</spftns:origMessageId>
+  <spftns:origMessageTimestamp>2009-12-07T19:25:10-05:00</spftns:origMessageTimestamp>
+  <spftns:otherInfo/>
+  <spftns:regionCode>
+   <spftns:code/>
+  </spftns:regionCode>
+  <spftns:exception>
+   <spftns:sequenceNo>0</spftns:sequenceNo>
+   <spftns:exceptionCode>0x00d30002</spftns:exceptionCode>
+   <spftns:exceptionDescription>Failed to establish a backside connection</spftns:exceptionDescription>
+  </spftns:exception>
+ </ns0:ExceptionInfo>
+ <customInfoList>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+  <customEntry>
+   <customName/>
+   <customValue/>
+  </customEntry>
+ </customInfoList>
+</ns0:KpCanonicalLogMessage>

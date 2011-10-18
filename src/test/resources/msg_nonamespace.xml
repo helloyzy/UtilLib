@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KpCanonicalLogMessage>
+	<middlewareComponentName>DataPower</middlewareComponentName>
+	<logTimestamp>20100125150709</logTimestamp>
+	<messageId>23520785</messageId>
+	<messageCorrId>23520785</messageCorrId>
+	<senderInfo>
+		<applicationName>Web Service Proxy: WSP_XBETS_ESBBenefitServiceExport</applicationName>
+		<ipAddress>127.0.0.1</ipAddress>
+		<transportProtocol>http</transportProtocol>
+	</senderInfo>
+	<customInfoList>
+		<customEntry>
+			<customName>custom column 1</customName>
+			<customValue>value 1</customValue>
+		</customEntry>
+		<customEntry>
+			<customName>custom column 2</customName>
+			<customValue>value 2</customValue>
+		</customEntry>
+	</customInfoList>
+</KpCanonicalLogMessage>

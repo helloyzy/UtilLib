@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NS1:GALTestMessage xmlns="http://org.auitmessage/log/default" xmlns:NS1="http://org.auitmessage/log/v1.0">
+	 <NS1:middlewareComponentName attr1="hello">MiddleWare</NS1:middlewareComponentName>
+	 <NS1:logTimestamp>20100125150709</NS1:logTimestamp>
+	 <NS1:messageId>message id</NS1:messageId>
+	 <NS1:messageCorrId>conversation id</NS1:messageCorrId>
+	 <NS1:messageType>Inbound</NS1:messageType>
+	 <NS1:senderInfo>
+		  <NS1:applicationName>AppName</NS1:applicationName>
+		  <NS1:ipAddress>127.0.0.1</NS1:ipAddress>
+		  <NS1:transportProtocol>JMS</NS1:transportProtocol>
+	 </NS1:senderInfo>
+	 <receiverInfo>
+		  <applicationName>application</applicationName>
+		  <componentName>CompName</componentName>
+	 </receiverInfo>
+	 <NS1:messageContent><![CDATA[<innerText>Test data</innerText>]]></NS1:messageContent>
+</NS1:GALTestMessage>
