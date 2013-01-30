@@ -41,7 +41,7 @@ public class MethodAccessor {
 	 * @return Object -- the value this protected/private method returns, can be ignored if the method returns nothing
 	 * @throws Exception
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static Object invokeMethod(Object target, String methodName, Object[] parameters) throws Exception {
         // extract the types from the parameters
 		Class[] paramsTypes = new Class[parameters.length];
@@ -59,12 +59,12 @@ public class MethodAccessor {
 	 * @return Object -- the value this protected/private method returns, can be ignored if the method returns nothing
 	 * @throws Exception
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static Object invokeMethod(Object target, String methodName, Class[] parameterClasses, Object[] parameters) throws Exception {
 		return invokeMethod(target, target.getClass(), methodName, parameterClasses, parameters);
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static Object invokeStaticMethod(Class targetClass, String methodName, Class[] parameterClasses, Object[] parameters) throws Exception {
 		return invokeMethod(null, targetClass, methodName, parameterClasses, parameters);
 	}
@@ -79,7 +79,7 @@ public class MethodAccessor {
 	 * @return Object -- the value this protected/private method returns, can be ignored if the method returns nothing
 	 * @throws Exception
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static Object invokeMethod(Object target, Class targetClass, String methodName, Class[] parameterClasses, Object[] parameters) throws Exception {
 		Method m = getMethod(targetClass, methodName, parameterClasses, parameters);
 		// bypass the security check
@@ -96,7 +96,7 @@ public class MethodAccessor {
 	 * @return Method or Null if we can not find the method
 	 * @throws Exception -- may throw SecurityException
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	static Method methodQuickMatch(Class targetClass, String methodName, Class[] parameterClasses) throws Exception {
 		try {
 			return targetClass.getDeclaredMethod(methodName, parameterClasses);
@@ -117,7 +117,7 @@ public class MethodAccessor {
 	 * @return List<Method>
 	 * @throws Exception
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	private static List<Method> getMethodThroughName(Class targetClass, String methodName) throws Exception {
 		List<Method> result = new ArrayList<Method>();
 		Method[] declaredMethods = targetClass.getDeclaredMethods();
@@ -157,7 +157,7 @@ public class MethodAccessor {
 	 * @param boxingClass
 	 * @return boolean -- true if the "boxingClass" is just the container class of the "primitiveClass", false otherwise
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	private static boolean isPrimitiveClassMatchBoxingClass(Class primitiveClass, Class boxingClass) {
 		try {
 			// all boxing classes(Integer,Boolean etc.) contains a static field "TYPE" which references to its related primitive type
@@ -176,7 +176,7 @@ public class MethodAccessor {
 	 * including the auto-boxing technique(means that if the "parameter" is an Integer, 
 	 * but the "parameterTypeToMatch" is int, we still can get a match), false otherwise
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	private static boolean isParameterMatchType(Class type, Object parameter) {
 		// For special types, we only consider primitive type(int,long,byte etc.), ignore void,array,interface,enum...
 		if (type.isPrimitive()) {					
@@ -216,7 +216,7 @@ public class MethodAccessor {
 		throw new NoSuchMethodException("No such method");
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	static Method methodAdvancedMatch(Class targetClass, String methodName, Object[] parameters) throws Exception {
 		List<Method> candidates_ThroughName = getMethodThroughName(targetClass, methodName);
 		List<Method> candidates_Filtered = filterMethodThroughNumOfParameters(candidates_ThroughName, parameters.length);
@@ -224,7 +224,7 @@ public class MethodAccessor {
 		
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	static Method getMethod(Class targetClass, String methodName, Class[] parameterClasses, Object[] parameters) throws Exception {
 		Method result;
 		// first quick search the method 

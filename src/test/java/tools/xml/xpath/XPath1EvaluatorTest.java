@@ -18,7 +18,7 @@ public class XPath1EvaluatorTest {
 	
 	private final static String RES_WITHNS = "/msg_namespace.xml";
 	
-	private final static String RES_WITHOUTNS = "/msg_nonamespace.xml";
+	// private final static String RES_WITHOUTNS = "/msg_nonamespace.xml";
 
 	private static void xmlSetup(String resPath)
 			throws Exception {

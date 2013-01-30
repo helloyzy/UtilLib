@@ -43,7 +43,7 @@ public class MockMailMessage extends Message {
 		
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enumeration getAllHeaders() throws MessagingException {
 		// TODO Auto-generated method stub
@@ -116,7 +116,7 @@ public class MockMailMessage extends Message {
 		return 0;
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enumeration getMatchingHeaders(String[] arg0)
 			throws MessagingException {
@@ -124,7 +124,7 @@ public class MockMailMessage extends Message {
 		return null;
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enumeration getNonMatchingHeaders(String[] arg0)
 			throws MessagingException {

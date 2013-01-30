@@ -24,17 +24,17 @@ public class FieldAccessor {
 		setValue(target.getClass(), target, propertyName, value);
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static Object getStaticValue(Class targetClass, String propertyName) throws Exception {
 		return getValue(targetClass, null, propertyName);
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static void setStaticValue(Class targetClass, String propertyName, Object value) throws Exception {
 		setValue(targetClass, null, propertyName, value);
 	}
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static Object getValue(Class targetClass, Object target, String propertyName) throws Exception {
 		Field field = getField(targetClass, propertyName);
 		// Essentially, a child class should holds all variables its super class holds, only that
@@ -43,7 +43,7 @@ public class FieldAccessor {
 		return field.get(target);
 	}	
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static void setValue(Class targetClass, Object target, String propertyName, Object value) throws Exception {
 		Field field = getField(targetClass, propertyName);
 		// Essentially, a child class should holds all variables its super class holds, only that
@@ -59,7 +59,7 @@ public class FieldAccessor {
 	 * @return Field 
 	 * @throws NoSuchFieldException -- if we iterate to the Object class but still can not get the field, throw this exception out
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	static Field getField(Class targetClass, String propertyName) throws NoSuchFieldException {		
 		try {
 		    return targetClass.getDeclaredField(propertyName);
