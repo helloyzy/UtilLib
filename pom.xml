@@ -1,114 +1,49 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>UtilLib</groupId>
-  <artifactId>UtilLib</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>UtilLib</name>
-  <description>Util lib</description>
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.wy</groupId>
+	<artifactId>utillib</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>UtilLib</name>
+	<description>Util lib</description>
+	<properties>
 		<java-version>1.5</java-version>
 		<org.slf4j-version>1.5.10</org.slf4j-version>
 		<junit.version>4.8.1</junit.version>
-  </properties>
-  <dependencies>
-	  	<dependency>
-	  		<groupId>junit</groupId>
-	  		<artifactId>junit</artifactId>
-	  		<version>${junit.version}</version>
-	  		<scope>test</scope>
-	  	</dependency> 
-	  	
-	  	<dependency>
-	  		<groupId>javax.mail</groupId>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
-			<version>1.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>javax.jms</groupId>
-			<artifactId>jms</artifactId>
-			<version>1.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>runtime</groupId>
-			<artifactId>runtime</artifactId>
-			<version>1.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>activation</groupId>
-			<artifactId>activation</artifactId>
-			<version>1.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>BCEL</groupId>
-			<artifactId>BCEL</artifactId>
-			<version>1.0</version>
-	  	</dependency> 	
-	  	
-	  	<dependency>
-	  		<groupId>regexp</groupId>
-			<artifactId>regexp</artifactId>
-			<version>1.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>org.saxon</groupId>
-			<artifactId>saxon</artifactId>
-			<version>9.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>org.saxon</groupId>
-			<artifactId>dom</artifactId>
-			<version>9.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>org.saxon</groupId>
-			<artifactId>xpath</artifactId>
-			<version>9.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>org.simplexml</groupId>
-			<artifactId>simplexml</artifactId>
-			<version>2.1.8</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>org.stax</groupId>
-			<artifactId>stax</artifactId>
-			<version>1.2.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>org.stax</groupId>
-			<artifactId>api</artifactId>
-			<version>1.0.1</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>org.xalan</groupId>
-			<artifactId>xalan</artifactId>
-			<version>2.7.1</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>org.xercesImpl</groupId>
-			<artifactId>xercesImpl</artifactId>
-			<version>1.0</version>
-	  	</dependency>
-	  	
-	  	<dependency>
-	  		<groupId>org.xml</groupId>
-			<artifactId>apis</artifactId>
-			<version>1.0</version>
-	  	</dependency>
-	  	
-	  	<!-- Logging -->
+			<version>1.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>jms-api</artifactId>
+			<version>1.1-rev-1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>Saxon-HE</artifactId>
+			<version>9.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.simpleframework</groupId>
+			<artifactId>simple-xml</artifactId>
+			<version>2.7</version>
+		</dependency>
+
+		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -150,8 +85,8 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-  </dependencies>
-  <build>
+	</dependencies>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -173,7 +108,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>						
+			</plugin>
 		</plugins>
 	</build>
 </project>

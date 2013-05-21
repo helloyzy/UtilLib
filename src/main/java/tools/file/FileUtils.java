@@ -18,14 +18,19 @@ import java.io.Writer;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class FileUtils {
+	
+	private static Logger logger = LoggerFactory.getLogger(FileUtils.class);
 
 	private static void _close(Closeable closeable) {
 		if (closeable != null) {
 			try {
 				closeable.close();
 			} catch (Exception e) {
-				System.err.println("Failed to close file resource.");
+				logger.error("Failed to close file resource.", e);
 			}
 		}
 	}
@@ -174,12 +179,10 @@ public class FileUtils {
 				outChannel.force(false);
 			}
 		} finally {
-			if (inChannel != null) {
-				inChannel.close();
-			}
-			if (outChannel != null) {
-				outChannel.close();
-			}
+			_close(inChannel);
+			_close(in);
+			_close(outChannel);
+			_close(out);
 		}
 	}
 
